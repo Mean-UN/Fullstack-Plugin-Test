@@ -1,0 +1,143 @@
+/* WRSE frontend styles */
+.wrse-scoreboard, .wrse-match-center, .wrse-upcoming { 
+  font-family: Arial, sans-serif; 
+}
+.wrse-toolbar { 
+  display:flex; 
+  gap:10px; 
+  margin-bottom:10px; 
+  flex-wrap:wrap; 
+}
+.wrse-toolbar input, .wrse-toolbar select { 
+  padding:6px 8px; 
+}
+.wrse-list, .wrse-upcoming-list { 
+  border:1px solid #e2e2e2; 
+  border-radius:8px; 
+  padding:8px; 
+  min-height:80px; 
+  background:#fff; 
+  box-shadow:0 1px 3px rgba(0,0,0,0.06); 
+  max-height:600px; 
+  overflow:auto; 
+}
+.wrse-row { 
+  display:grid; 
+  grid-template-columns: 1.1fr 0.9fr 1fr 0.6fr 0.8fr 1fr 0.6fr; 
+  gap:8px; 
+  padding:8px; 
+  border-bottom:1px solid #f1f1f1; 
+  align-items:center; 
+}
+.wrse-row.live { 
+  background:#f6ffed; 
+}
+.wrse-row.finished { 
+  background:#f9f9f9; 
+}
+.wrse-row:last-child { 
+  border-bottom:none; 
+}
+.wrse-team { 
+  font-weight:600; 
+}
+.wrse-score { 
+  font-size:14px; 
+  font-weight:700; 
+}
+.wrse-odds { 
+  font-size:12px; 
+  display:flex; 
+  gap:6px; 
+  flex-wrap:wrap; 
+}
+.wrse-pill { 
+  padding:2px 6px; 
+  border-radius:4px; 
+  background:#eef1ff; 
+}
+.wrse-prob { 
+  font-size:12px; 
+  color:#555; 
+}
+.wrse-status { 
+  font-size:11px; 
+  text-transform:uppercase; 
+  letter-spacing:0.5px; 
+}
+.wrse-skeleton, .skeleton { 
+  background:linear-gradient(90deg,#f2f2f2 25%,#eaeaea 37%,#f2f2f2 63%); 
+  background-size:400% 100%; 
+  animation:wrse-shimmer 1.4s ease infinite; 
+  border-radius:6px; 
+  height:18px; 
+}
+@keyframes wrse-shimmer { 
+  0%{
+    background-position:100% 0;
+  } 
+  100%{
+    background-position:-100% 0;
+  } 
+}
+
+.wrse-match-center .wrse-mc-grid { 
+  display:grid; 
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); 
+  gap:12px; 
+}
+.wrse-mc-card { 
+  padding:12px; 
+  border:1px solid #e2e2e2; 
+  border-radius:8px; 
+  background:#fff; 
+  box-shadow:0 1px 3px rgba(0,0,0,0.05); 
+  min-height:80px; 
+}
+.wrse-mc-header { 
+  padding:12px; 
+  border:1px solid #e2e2e2; 
+  border-radius:8px; 
+  background:#fff; 
+  margin-bottom:10px; 
+  font-weight:700; 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+}
+.wrse-mc-odds .wrse-odds-row { 
+  display:flex; 
+  justify-content:space-between; 
+}
+.wrse-upcoming-item { 
+  display:flex; 
+  justify-content:space-between; 
+  padding:6px 4px; 
+  border-bottom:1px solid #f1f1f1; 
+}
+.wrse-upcoming-item:last-child { 
+  border-bottom:none; 
+}
+.wrse-badge-up { 
+  color:#0c8a2a; 
+}
+.wrse-badge-down { 
+  color:#b00020; 
+}
+.wrse-flash { 
+  animation:wrse-flash 1s ease-in-out 2; 
+  background:#fff4e5; 
+}
+@keyframes wrse-flash { 
+  0% { 
+    background:#fff4e5; 
+  } 100% { 
+    background:#fff; 
+  } 
+}
+
+@media (max-width: 768px) {
+  .wrse-row { 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: "league league" "time time" "home score" "away odds" "prob status"; }
+}

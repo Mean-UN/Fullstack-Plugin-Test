@@ -1,0 +1,19 @@
+.wrse-match-center{
+    padding:10px
+}
+.wrse-mc-header{
+    font-weight:700;
+    margin-bottom:10px
+}
+.wrse-mc-grid{
+    display:grid;
+    grid-template-columns:1fr;gap:10px
+}
+@media(min-width:900px){
+    .wrse-mc-grid{grid-template-columns:1fr 1fr}
+}
+.wrse-mc-card{
+    border:1px solid #ddd;
+    padding:10px;
+    border-radius:8px
+}

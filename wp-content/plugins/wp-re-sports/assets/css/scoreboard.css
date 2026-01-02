@@ -1,0 +1,15 @@
+.wrse-scoreboard{
+    padding:10px
+}
+.wrse-table{
+    width:100%;
+    border-collapse:collapse
+}
+.wrse-table th,.wrse-table td{
+    border:1px solid #ddd;padding:8px;
+    font-size:13px
+}
+.wrse-skel{
+    padding:12px;
+    border:1px dashed #bbb
+}
