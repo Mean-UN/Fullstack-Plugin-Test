@@ -3,7 +3,7 @@
 Plugin Name: WP Realtime Sports Engine
 Description: Realtime sports scores and odds engine
 Version: 1.0.0
-Author: Dev Test
+Author: Mean Un
 */
 
 if (!defined('ABSPATH')) exit;
